@@ -17,28 +17,45 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvScreenName"
-        android:layout_width="0dp"
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         app:layout_constraintLeft_toRightOf="@+id/ivProfileImage"
         app:layout_constraintTop_toTopOf="@id/ivProfileImage"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
         android:text="UserName"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         />
+    <TextView
+        android:id="@+id/tvScreenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="@id/tvName"
+        android:text="\@userScreenName"/>
+
+    <TextView
+        android:id="@+id/tvRelDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/tvScreenName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvName"
+        android:text="\u2022 10m"/>
 
     <TextView
         android:id="@+id/tvBody"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        app:layout_constraintLeft_toLeftOf="@+id/tvScreenName"
-        app:layout_constraintTop_toBottomOf="@+id/tvScreenName"
+        app:layout_constraintLeft_toLeftOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvScreenName"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
         android:text="Tweet Body"
         android:textColor="@android:color/black"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
